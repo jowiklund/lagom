@@ -8,6 +8,8 @@ export default function(name, markup, style, onConnected) {
 	  ${markup}
 	`;
 
+	window.ShadyCSS && ShadyCSS.prepareTemplate(template, name.replace(/@/g, '') , 'div');
+
 	customElements.define(name.replace(/@/g, ''), class TemplateComponent extends HTMLElement {
 
 	  $(selector) {
