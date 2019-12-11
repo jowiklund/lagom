@@ -1,3 +1,4 @@
+import '@webcomponents/webcomponentsjs';
 export { default as lagom } from './js';
 import lagom from './js';
 
@@ -25,11 +26,15 @@ lagom('@test-component', () => {
 		</div>
 		`,
 		onConnected(self) {
-			self.on('click', () => {
-				console.log('hej')
+			self.on('click', (e) => {
+				console.log(e)
 			})
 		}
 	}
 })
 
-lagom('div').addClass('test').appendTo('body');
+lagom('body').addClass('test');
+
+lagom('.manyDivs').find('div').each(el => {
+	el.on('click', (e) => {console.log(e.target)});
+});

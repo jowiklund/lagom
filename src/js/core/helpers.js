@@ -1,16 +1,9 @@
 export const classified = (el) => {
-	if ( el.startsWith('.') || el.startsWith('#') || document.querySelector(el)) {
-		return true;
-	}
-	
-	return false;
+	return el.startsWith('.') || el.startsWith('#') || document.querySelector(el) ? true : false;
 }
 
 export const isTemplate = (el) => {
-	if (el.startsWith('@')) {
-		return true;
-	}
-	return false;
+	return el.startsWith('@') ? true : false;
 }
 
 export const elementFrom = (htmlString) => {
