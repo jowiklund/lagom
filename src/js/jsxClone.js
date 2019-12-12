@@ -71,28 +71,3 @@ const h1 = (...args) => makeElement(`h1`, ...args);
 const header = (...args) => makeElement(`header`, ...args);
 const p = (...args) => makeElement(`p`, ...args);
 const span = (...args) => makeElement(`span`, ...args);
-
-/* 
-
-Example:
-
-document.body.appendChild(
-  div({ id: `app` },
-    header({ className: `header` },
-      h1({ className: `header__title` }, `Know It All`),
-      a(
-        {
-          className: `header__help`,
-          target: `_blank`,
-          rel: `noopener noreferrer`,
-          title: `Find out more about know it all`,
-          href: `https://hackernoon.com/what-you-dont-know-about-web-development-d7d631f5d468#.ex2yp6d64`,
-        },
-        `What is this?`,
-      ),
-    ),
-    div({ className: `skill-table` }),
-  )
-);
-
-*/
